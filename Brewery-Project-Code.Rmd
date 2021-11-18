@@ -53,13 +53,17 @@ names(brewery)
 ## Begin prepare an interactive geo map of breweries by state
 ```{r}
 ## Set the map useing leaflet library:
-leaflet()%>%addTiles()
+#leaflet()%>%addTiles()
+
+leaflet()%>%addTiles(urlTemplate = "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png")
+
 ## Add popup for brewery information
 brewery_map <- brewery%>%mutate(popup_info=paste(Name,"<br/>",City,"<br>",State,"<br>"))
 ## Check popup_info column of data added to dataset
 head(brewery_map)
 ## Tweak the map with info layout, set circles smaller to enhance visual
-leaflet()%>%addTiles()%>%addCircleMarkers(data=brewery_map, lat=~Latitude, lng=~Longitude, radius=~1, popup=~popup_info)
+#leaflet()%>%addTiles()
+leaflet()%>%addTiles(urlTemplate = "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png")%>%addCircleMarkers(data=brewery_map, lat=~Latitude, lng=~Longitude, radius=~1, popup=~popup_info)
 # End prepare an interactive geo map of breweries by state#
 
 # Corresponding distribution plot of breweries by state
