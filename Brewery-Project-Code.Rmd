@@ -2,10 +2,9 @@
 title: "Beers Team Project"
 author: "Celia"
 date: "10/25/2021"
+output: html_document 
 runtime: shiny
-output: html_document
-output_file: "Brewery-Project-Code.html"
-#output_dir: "C:\Users\Owner\OneDrive\Documents\GitHub\ProjectWebsite\BreweryCaseStudy"
+#output_file: "Brewery-Project-Code.html"
 ---
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set( echo = TRUE, message=FALSE, warning=FALSE, fig.width=8 )
