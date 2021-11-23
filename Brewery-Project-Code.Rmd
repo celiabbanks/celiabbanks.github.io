@@ -2,12 +2,13 @@
 title: "Beers Team Project"
 author: "Celia"
 date: "10/25/2021"
+runtime: shiny
 output: html_document
 ---
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set( echo = TRUE, message=FALSE, warning=FALSE, fig.width=8 )
 ```
-# Establish Libraries
+## Establish Libraries
 ```{r}
 library(ggplot2)
 library(plotly)
@@ -19,8 +20,7 @@ library(e1071)
 library(xlsx)
 library(stats)
 ```
-## Code from week2 since EDA will be presented
-### Libraries for visualization techniques are needed
+### Libraries for visualization techniques 
 ```{r}
 library(MASS)
 library(dplyr)
@@ -32,7 +32,7 @@ library(geofacet) #for geographic-based facets
 library(naniar) #help with missing values
 library(leaflet) #for map visualization
 ```
-## Prepare data
+## Prepare Data
 ```{r}
 ### read in dataset
 ### added Type column to create beer types as factors later on
@@ -48,25 +48,25 @@ head(beer, 10)
 names(beer)
 names(brewery)
 ```
-# VISUALIZATIONS
+## Visualizations
 
-## Begin prepare an interactive geo map of breweries by state
+### Interactive map of breweries by state: Point and click a circle to get brewery location
 ```{r}
-## Set the map useing leaflet library:
-
-#leaflet()%>%addTiles()
-leaflet()%>%addTiles(urlTemplate = "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png")
-
-## Add popup for brewery information
+## Set the map using leaflet library:
+#Make interactive on Shiny
+     renderLeaflet({
+         # now add the spatial data into leaflet
+         leaflet() %>%
+           addTiles(urlTemplate = "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png")%>%
+           addCircleMarkers(data = brewery_map, lat = ~Latitude, lng = ~Longitude, radius=~1, popup = ~popup_info)
+})
 brewery_map <- brewery%>%mutate(popup_info=paste(Name,"<br/>",City,"<br>",State,"<br>"))
-## Check popup_info column of data added to dataset
-head(brewery_map)
-## Tweak the map with info layout, set circles smaller to enhance visual
-#leaflet()%>%addTiles()
-leaflet()%>%addTiles(urlTemplate = "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png")%>%addCircleMarkers(data=brewery_map, lat=~Latitude, lng=~Longitude, radius=~1, popup=~popup_info)
 # End prepare an interactive geo map of breweries by state#
 
-# Corresponding distribution plot of breweries by state
+```
+### Territorial plotting of breweries by state/region
+```{r}
+# plot breweries by state
 ggplot(brewery_map, aes(x=as.factor(State), color="blue")) +
   geom_bar(color="blue") +
   ggtitle("Distribution of Breweries by State") +
@@ -86,7 +86,9 @@ ggplot(brewery_map, aes(x=as.factor(Region), color="green")) +
         axis.text.x = element_text(angle = 90)) +
   theme(plot.title = element_text(hjust = 0.5))
 ```
-# Begin-Exploratory Data Analysis #
+
+## Begin Exploratory Data Analysis 
+
 ```{r}
 ## Examine the datasets
 head(beer, 5)
@@ -112,14 +114,17 @@ str(df)
 
 #Get count of breweries in each state
 brewery_count <- aggregate(Brewery_id ~ State, df, sum) #gives column name for count as Brewery_ID
-
+```
+```{r}
 #Rename the Brewery_id column to Total_Breweries
 brewery_count <- brewery_count %>%
    rename(
      Total_Breweries = Brewery_id 
 )
 ```
-## Check for missing values 
+
+### Check for missing values 
+
 ```{r}
 library(naniar)
 vis_miss(df)
@@ -149,7 +154,8 @@ mergeABVIBU = merge_bb[,!(names(merge_bb) %in% drop)]
 drop <- c("Region.y", "Style.y")
 mergeABVIBU.Style = merge_bb[,!(names(merge_bb) %in% drop)]
 ```
-# Visualize ABV v IBU medians by state and by region
+
+### Visualize specifically ABV v IBU medians by state and by region
 
 ```{r}
 options(scipen = 999)
@@ -168,8 +174,11 @@ ggplot(mergeABVIBU, aes(ABV, IBU, color=Region)) +
 
 #recheck for missing values
 vis_miss(df)
+
 ```
-# Summary Statistics
+
+### Summary Statistics
+
 ```{r}
 #load the mosaic package/library
 library(mosaic)
@@ -180,14 +189,42 @@ library(psych)
 favstats(df$ABV)
 favstats(df$IBU)
 
+
 par(mfrow=c(2,2)) #resets graphics device
 #histograms for ABV and IBU
-hist(df$ABV, labels = TRUE)
-hist(df$IBU, labels = TRUE)
+renderPlot({hist(df$ABV, labels = TRUE)})
+
+renderPlot({hist(df$IBU, labels = TRUE)})
+#selectInput("n_breaks", label = "Number of bins:",
+#              choices = c(10, 20, 35, 50), selected = 20)
+
+#sliderInput("bw_adjust", label = "Bandwidth adjustment:",
+#              min = 0.2, max = 2, value = 1, step = 0.2)
+
+#renderPlot({
+ # hist(df$ABV, probability = TRUE,
+       #breaks = as.numeric(input$n_breaks),
+  #     breaks = input$n_breaks,
+   #    labels = TRUE)
+  #dens <- density(df$ADV, adjust=input$bw_adjust)
+  #lines(dens, col = "blue")
+#})
+
+#renderPlot({
+#  hist(df$ABV, probability = TRUE,
+       #breaks = as.numeric(input$n_breaks),
+ #     breaks = input$n_breaks,
+#      labels = TRUE)
+ # dens <- density(df$ADV, adjust=input$bw_adjust)
+  #lines(dens, col = "red")
+#})
+
+
 ```
 
+### Description by beer style or type
 ```{r}
-# Describe by Style or by Type
+#Describe by Style or by Type
 #describeBy(df, group=df$Style)
 #describeBy(df,group=df$Type)
 State_ABV <- aggregate(x = df$ABV,              
@@ -266,8 +303,9 @@ par(mfrow=c(2,2)) #reset graphics device
 plot_IPA = train %>% filter(Type == "IPA")
 plot_IPA %>% ggplot(aes(x=ABV, y=IBU, color=Type)) + geom_point() + ggtitle("ABV vs IBU by IPA Beer Type")
 ```
-# kNN analysis 
-## Conduct the k-NN
+
+## kNN Analysis 
+### Conduct the k-NN analysis
 ```{r}
 #What does a confusion matrix tell you:
 #"It is a summary of prediction results on a 
@@ -304,20 +342,24 @@ head(dfALEIPA)
 #check Type as factor
 levels(dfALEIPA$Type)
 ```
-## Do reverse levels for confusion matrix table:
+
+### Do reverse levels for confusion matrix table
+
 ```{r}
 dfALEIPA$Type <- fct_rev(dfALEIPA$Type)
 levels(dfALEIPA$Type)
 ```
-# kNN analysis - continued
-## re-run k=15 with Type reversed
+
+## kNN Analysis - continued
+### re-run k=15 with Type reversed
 ```{r}
 set.seed(2040) #for reproducibility
 classifications = knn(train[,c(4,5)],test[,c(4,5)],train$Type, prob = TRUE, k = 15)
 table(test$Type,classifications)
 confusionMatrix(table(test$Type,classifications))
 ```
-# Obtain optimal k value for the kNN model
+
+### Obtain optimal k value for the kNN model
 ```{r}
 type_accuracy <- data.frame(accuract=numeric(75), k=numeric(75))
 for (iter in 1:75) {
@@ -332,16 +374,20 @@ for (iter in 1:75) {
 
 #plot of optimal k
 par(mfrow=c(2,2)) #reset graphics device 
-figure <- plot_ly(type_accuracy, x=type_accuracy$k, y=type_accuracy$accuracy, 
+renderPlotly({figure <- plot_ly(type_accuracy, x=type_accuracy$k, y=type_accuracy$accuracy, 
               type="scatter", mode="lines")
 figure <- figure %>% layout(title='Optimal k for Model',
             xaxis = list(title = 'K value',
                           zeroline=TRUE),
             yaxis = list(title = 'Accuracy'))
-figure
+figure})
+
+
 
 ```
-# Use Naive Bayes to compare against kNN...
+
+### Use Naive Bayes to compare against kNN...
+
 ```{r knitr, echo=FALSE}
 library(knitr)
 library(e1071)
@@ -377,9 +423,9 @@ for(j in 1:iterations)
 MeanAcc=colMeans(masterAcc)
 MeanAcc
 
-
+#```{r,echo = FALSE, warning = FALSE, message=FALSE, error=TRUE}
 ```
-```{r,echo = FALSE, warning = FALSE, message=FALSE, error=TRUE}
+```{r}
 knitr::opts_chunk$set(cache=TRUE)
 #plotting NaiveBayes
 #requie naivebayes package
@@ -389,14 +435,25 @@ nb <- naive_bayes(Type ~ ., data = dfALEIPA, prior = c(0.1, 0.3), laplace=1)
 # Visualize marginal distributions of two predictors
 par(mfrow=c(2,2)) #reset graphics device 
 
-plot(nb, which = c("ABV", "IBU"), ask = TRUE,
+renderPlot({plot(nb, which = c("ABV"), ask = FALSE,
      arg.num = list(col = 1:3, lty = 1,
                     main = "Naive Bayes Plot", legend.position = "topright",
-                    legend.cex = 0.55))
+                    legend.cex = 0.55))})
+
+renderPlot({plot(nb, which = c("IBU"), ask = FALSE,
+     arg.num = list(col = 1:3, lty = 1,
+                    main = "Naive Bayes Plot", legend.position = "topright",
+                    legend.cex = 0.55))})
+
+#renderPlot({plot(nb, which = "IBU", ask = FALSE,
+#     arg.num = list(col = 1:3, lty = 1,
+#                    main = "Naive Bayes Plot", legend.position = #"topright",
+#                    legend.cex = 0.55))})
 
 ```
-# How about a third test -- one that tests medians between ABV v IBU for IPAs and ABV v IBU for Ales?
-## Try the wilcox ranked sum test for difference in medians
+
+### How about a third test -- one that tests medians between ABV v IBU for IPAs and ABV v IBU for Ales?
+### Try the Wilcox ranked sum test for difference in medians
 ```{r}
 #Type -> ABV | IBU| Diff ABV-IBU | Absolute Diff ABV-IBU | Rank
 
@@ -436,7 +493,8 @@ res2$p.value
 library(Hmisc)
 cor(dfALEIPA$ABV, dfALEIPA$IBU)
 ```
-# Visualize correlations
+
+### Visualize correlations
 
 ```{r}
 library(GGally)
@@ -444,7 +502,8 @@ library(GGally)
 par(mfrow=c(2,2)) #reset graphics device 
 ggpairs(dfALEIPA, columns = 4:5, ggplot2::aes(colour=Type)) +  ggtitle("Correlation Plot of ABV vs IBU by Beer Type") 
 ```
-# Conclusion of Wilcoxon Rank Sum Test and overall problem analysis:
+
+### Conclusion of Wilcoxon Rank Sum Test and overall problem analysis:
 ```{r}
 #p-value is significant in rejecting the null hypothesis that ABV v IBU by
 #the two beer types is equal.  
