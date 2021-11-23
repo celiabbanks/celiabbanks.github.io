@@ -2,6 +2,7 @@
 title: "BreweryCase"
 author: "Celia"
 date: "11/16/2021"
+runtime: shiny
 output: html_document
 ---
 # This website houses Celia's learning projects
