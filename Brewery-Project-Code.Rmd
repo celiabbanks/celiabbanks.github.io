@@ -4,7 +4,6 @@ author: "Celia"
 date: "10/25/2021"
 output: html_document 
 runtime: shiny
-output_file: "Brewery-Project-Code.html"
 ---
 ```{r setup, include=FALSE}
 #knitr::opts_chunk$set( echo = TRUE, message=FALSE, warning=FALSE, fig.width=8 )
