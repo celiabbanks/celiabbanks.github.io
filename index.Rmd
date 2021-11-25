@@ -5,7 +5,3 @@ date: "11/16/2021"
 runtime: shiny
 output: html_document
 ---
-# This website houses Celia's learning projects
-## There are some awesome analytics provided
-### Text contained in this doc will be used for YAML
-After knitting this file, will put html version on Github
