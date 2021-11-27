@@ -1,12 +1,3 @@
 ---
 name: "My-Website"
-navbar:
- title: "Celia Website"
- left:
- - text: "Home"
-   href: index.html
- - text: "About"
-   href: about.html
- - text: "Brewery Project"
-   href: https://i-meta-inc.shinyapps.io/Brewery-Project-Code/
- 
+title: "Celia's Website"
