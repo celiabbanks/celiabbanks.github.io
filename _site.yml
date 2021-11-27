@@ -9,5 +9,7 @@ navbar:
       href: about.html
     - text: "Beer Case Study"
       href: "https://i-meta-inc.shinyapps.io/Brewery-Project/"
+    - text: "Beer Executive Presentation"
+      href: "https://youtu.be/ji3fBfYK65g"
     - text: "People Analytics Case Study"
       href: people.html
