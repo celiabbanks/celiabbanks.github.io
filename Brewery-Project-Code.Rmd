@@ -2,7 +2,7 @@
 title: "Beers Team Project"
 author: "Celia"
 date: "10/25/2021"
-output: html_document 
+output: html_document
 runtime: shiny
 ---
 ```{r setup, include=FALSE}
