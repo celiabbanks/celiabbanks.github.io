@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## This is Celia's website of project case studies
 
 You can use the [editor on GitHub](https://github.com/celiabbanks/celiabbanks.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
 
