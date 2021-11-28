@@ -12,4 +12,4 @@ navbar:
     - text: "Beer Executive Presentation"
       href: "https://youtu.be/ji3fBfYK65g"
     - text: "People Analytics Case Study"
-      href: about.html
+      href: index.html
