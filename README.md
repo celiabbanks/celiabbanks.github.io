@@ -13,7 +13,7 @@ https://i-meta-inc.shinyapps.io/Brewery-Project/
   
 People Analytics Case Study
 
-  1. Analysis - (Not yet published)
+  1. Analysis - https://i-meta-inc.shinyapps.io/People-Metrics/
   
-  2. Executive Presentation - (Not yet published)
+  2. Executive Presentation - https://youtu.be/AEOTUucGayo
   
