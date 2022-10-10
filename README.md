@@ -6,9 +6,9 @@ This site is currently under construction but you can view the collections as wo
   
 People Analytics Case Study
 
-  1. Analysis - https://i-meta-inc.shinyapps.io/People-Metrics/
+  1. Analysis - <a href="https://i-meta-inc.shinyapps.io/People-Metrics/" >People Analytics</a>
   
-  2. Executive Presentation - https://youtu.be/AEOTUucGayo
+  2. Executive Presentation - <a href="https://youtu.be/AEOTUucGayo">People Executive Presentation</a>
 
 
 
@@ -23,8 +23,7 @@ Causal Inference Study
 
 Beer Case Study
 
-  1. Analysis -
-https://i-meta-inc.shinyapps.io/Brewery-Project/
+  1. Analysis - <a href="https://i-meta-inc.shinyapps.io/Brewery-Project/" >Brewery Analysis</a>
 
-  2. Executive Presentation - https://youtu.be/ji3fBfYK65g
+  2. Executive Presentation - <a href="https://youtu.be/ji3fBfYK65g" >Brewery Executive Presentation</a>
   
