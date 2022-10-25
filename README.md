@@ -1,6 +1,3 @@
-## Welcome to Celia's Portfolio Website
-
-This site is currently under construction but you can view the collection as work in progress here:
   
 <b>People Analytics Case Study</b>
 
