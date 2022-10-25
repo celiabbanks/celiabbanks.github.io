@@ -12,19 +12,19 @@ People Analytics Case Study
 
 Patent Presentation
 
-    Introducing Spice Chip Technology User Experience by I-Meta Inc - <a href="https://youtu.be/uttoP9aTVb8" >Spice Chip Technology System</a>
+  Introducing Spice Chip Technology User Experience by I-Meta Inc - <a href="https://youtu.be/uttoP9aTVb8" >Spice Chip Technology System</a>
 
   
 Website Design
   
-    I-Meta Company Website - <a href="https://spice-chip.com/" > I-Meta</a>
+  I-Meta Company Website - <a href="https://spice-chip.com/" > I-Meta</a>
   
 
 Interviews
 
-    Process Excellence Podcast  - <a href="https://www.processexcellencenetwork.com/business-process-management-bpm/articles/celia-banks-transctipt" >OpEx Podcast</a>
+  Process Excellence Podcast  - <a href="https://www.processexcellencenetwork.com/business-process-management-bpm/articles/celia-banks-transctipt" >OpEx Podcast</a>
 
  
 Articles
 
-    <i>Six Sigma Aids in Resource Planning</i> - <a href="https://www.isixsigma.com/operations/human-resources/six-sigma-aids-it-employee-resource-planning/" >iSixSigma Article</a>
+  <i>Six Sigma Aids in Resource Planning</i> - <a href="https://www.isixsigma.com/operations/human-resources/six-sigma-aids-it-employee-resource-planning/" >iSixSigma Article</a>
