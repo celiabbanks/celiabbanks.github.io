@@ -27,4 +27,4 @@ Interviews
  
 Articles
 
-  <i>Six Sigma Aids in Resource Planning</i> - <a "href=https://www.isixsigma.com/operations/human-resources/six-sigma-aids-it-employee-resource-planning/" >iSixSigma Article</a>
+  <i>Six Sigma Aids in Resource Planning</i> - <a href="https://www.isixsigma.com/operations/human-resources/six-sigma-aids-it-employee-resource-planning/" >iSixSigma Article</a>
