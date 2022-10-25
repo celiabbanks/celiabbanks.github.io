@@ -1,4 +1,4 @@
-## Welcome to Celia's portfolio website
+## Welcome to Celia's Portfolio Website
 
 This site is currently under construction but you can view the collection as work in progress here:
 
