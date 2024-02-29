@@ -26,4 +26,5 @@ This site is currently under construction but you can view the collection as wor
  
 <b>Articles</b>
 
-  <i>Six Sigma Aids in Resource Planning</i> - <a href="https://www.isixsigma.com/operations/human-resources/six-sigma-aids-it-employee-resource-planning/" >iSixSigma Article</a>
+ 1. <i>Spurious Correlations: The Comedy and Drama of Statistics</i> - <a href="https://www.linkedin.com/posts/celia-banks-imeta_spurious-correlations-the-comedy-and-drama-activity-7166893840618995712-3SDI?utm_source=share&utm_medium=member_desktop/" >TowardsDataScience Article</a>
+ 2. <i>Six Sigma Aids in Resource Planning</i> - <a href="https://www.isixsigma.com/operations/human-resources/six-sigma-aids-it-employee-resource-planning/" >iSixSigma Article</a>
