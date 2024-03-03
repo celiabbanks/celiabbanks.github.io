@@ -11,7 +11,7 @@ This site is currently under construction but you can view the collection as wor
 
 <b>Patent Presentation</b>
 
-  Introducing Spice Chip Technology User Experience by I-Meta Inc - <a href="https://youtu.be/uttoP9aTVb8" >Spice Chip Technology System</a>
+  Introducing Spice Chip Technology User Experience by I-Meta - <a href="https://youtu.be/uttoP9aTVb8" >Spice Chip Technology System</a>
 
   
 <b>Website Design</b>
