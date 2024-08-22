@@ -2,6 +2,11 @@
 
 This site is currently under construction but you can view the collection as work in progress here:
   
+<b>Pharma Dashboard</b>
+
+  1. Dashboard - <a href="[https://i-meta-inc.shinyapps.io/People-Metrics/](https://github.com/celiabbanks/celiabbanks.github.io/blob/main/Dash%20-%20Personal%20-%20Microsoft%E2%80%8B%20Edge%202024-08-06%2015-16-22-compressed.mp4)" >Pharma BI Analytics</a>
+
+
 <b>People Analytics Case Study</b>
 
   1. Analysis - <a href="https://i-meta-inc.shinyapps.io/People-Metrics/" >People Analytics</a>
