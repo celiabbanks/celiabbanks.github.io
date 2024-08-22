@@ -4,14 +4,18 @@ This site is currently under construction but you can view the collection as wor
   
 <b>Pharma Dashboard</b>
 
-  1. Dashboard - <a href="https://htmlpreview.github.io/?https://github.com/celiabbanks/celiabbanks.github.io/blob/main/Dash%20-%20Personal%20-%20Microsoft%E2%80%8B%20Edge%202024-08-06%2015-16-22-compressed.mp4" >Pharma BI Analytics</a>
+1. Dashboard - <a href="https://youtu.be/_IPNkGY10fw">Pharma BI Analytics<a/>
+
+#  1. Dashboard - <a href="https://htmlpreview.github.io/?https://github.com/celiabbanks/celiabbanks.github.io/blob/main/Dash%20-%20Personal%20-%20Microsoft%E2%80%8B%20Edge%202024-08-06%2015-16-22-compressed.mp4" >Pharma BI Analytics</a>
 
 
 <b>People Analytics Case Study</b>
 
-  1. Analysis - <a href="https://i-meta-inc.shinyapps.io/People-Metrics/" >People Analytics</a>
+  1. Executive Presentation - <a href="https://youtu.be/djXELxLp1Y0">People Executive Presentation</a>
   
-  2. Executive Presentation - <a href="https://youtu.be/AEOTUucGayo">People Executive Presentation</a>
+  # 1. Analysis - <a href="https://i-meta-inc.shinyapps.io/People-Metrics/" >People Analytics</a>
+  
+  # 2. Executive Presentation - <a href="https://youtu.be/AEOTUucGayo">People Executive Presentation</a>
 
 
 <b>Patent Presentation</b>
