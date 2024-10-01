@@ -2,10 +2,6 @@
 
 This site is currently under construction but you can view the collection as work in progress here:
   
-<b>Machine Learning Project</b>
-
-  1. First Stand-Up - <a href="https://youtu.be/IHSEvMyv5F4">First Stand-Up<a/>
-
 
 <b>Pharma Dashboard</b>
 
