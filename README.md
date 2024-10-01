@@ -2,14 +2,20 @@
 
 This site is currently under construction but you can view the collection as work in progress here:
   
+<b>Machine Learning Project</b>
+
+  1. First Stand-Up - <a href="https://youtu.be/IHSEvMyv5F4">First Stand-Up<a/>
+
+
 <b>Pharma Dashboard</b>
 
-1. Dashboard - <a href="https://youtu.be/_IPNkGY10fw">Pharma BI Analytics<a/>
+  1. Dashboard - <a href="https://youtu.be/_IPNkGY10fw">Pharma BI Analytics<a/>
+
 
 <b>People Analytics Case Study</b>
 
   1. Executive Presentation - <a href="https://youtu.be/djXELxLp1Y0">People Executive Presentation</a>
-  
+
 
 <b>Patent Presentation</b>
 
