@@ -4,7 +4,7 @@ This site is currently under construction but you can view the collection as wor
   
 <b>University of Michigan School of Information Poster Session</b>
 
-  1. Capstone Award Winning Poster  - <a href="https://youtu.be/_IPNkGY10fw">Pharma BI Analytics<a/>
+  1. Capstone Award Winning Poster  - <a href="C_Banks_BiasBusters_Poster.pdf">Capstone Poster<a/>
 
   2. Poster Presentation - <a href="https://youtu.be/OVulXrqYDVg">Poster Presentation Video<a/>
   
