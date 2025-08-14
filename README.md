@@ -2,6 +2,14 @@
 
 This site is currently under construction but you can view the collection as work in progress here:
   
+<b>University of Michigan School of Information Poster Session</b>
+
+  1. Capstone Award Winning Poster  - <a href="https://youtu.be/_IPNkGY10fw">Pharma BI Analytics<a/>
+
+  2. Poster Presentation - <a href="https://youtu.be/_IPNkGY10fw">Pharma BI Analytics<a/>
+  
+  3. UMSI LinkedIn Mention - <a href="https://youtu.be/_IPNkGY10fw">Pharma BI Analytics<a/>
+
 
 <b>Pharma Dashboard</b>
 
