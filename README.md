@@ -4,11 +4,13 @@ This site is currently under construction but you can view the collection as wor
   
 <b>University of Michigan School of Information Poster Session</b>
 
-  1. Capstone Award Winning Poster  - <a href="C_Banks_BiasBusters_Poster.pdf">Capstone Poster<a/>
+  1. Capstone Research Report - <a href="https://github.com/celiabbanks/celiabbanks.github.io/blob/main/CBanks_Detect-Mitigate_Research.pdf">Capstone Report</a>
+    
+  2. Capstone Award Winning Poster  - <a href="C_Banks_BiasBusters_Poster.pdf">Capstone Poster<a/>
 
-  2. Poster Presentation - <a href="https://youtu.be/OVulXrqYDVg">Poster Presentation Video<a/>
+  3. Poster Presentation - <a href="https://youtu.be/OVulXrqYDVg">Poster Presentation Video<a/>
   
-  3. UMSI LinkedIn Mention - <a href="https://www.linkedin.com/posts/university-of-michigan---school-of-information_there-was-much-to-celebrate-for-umsis-online-ugcPost-7330292183368900608-6ufc?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAdLUpsB_V3qhfGqPSpg0wMfMG78m2OeyI0">UMSI LinkedIn Post<a/>
+  4. UMSI LinkedIn Mention - <a href="https://www.linkedin.com/posts/university-of-michigan---school-of-information_there-was-much-to-celebrate-for-umsis-online-ugcPost-7330292183368900608-6ufc?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAdLUpsB_V3qhfGqPSpg0wMfMG78m2OeyI0">UMSI LinkedIn Post<a/>
 
 
 <b>Pharma Dashboard</b>
